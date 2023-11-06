@@ -10,6 +10,7 @@ COPY requirements.txt .
 #RUN --mount=type=cache,target=/root/.cache/pip pip install -r requirements.txt
 RUN pip install -r requirements.txt
 RUN pip3 install torch==2.1.0+cu121 torchvision==0.16.0 torchaudio==2.1.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+#RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 COPY requirements_docker.txt .
 RUN pip install -r requirements_docker.txt
 
