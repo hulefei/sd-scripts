@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  lefeihu-sd-script:
+    image: lefeihu/sd-script:latest
+    container_name: lefeihu-sd-script
+    build:
+      context: .
+#    ports:
+#      - 8080:8080
+#    volumes:
+#      - ./config:/config
+#      - ./data:/data
+#      - ./logs:/logs
+    environment:
+      - TZ=Asia/Shanghai
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: [ 'all' ]
+              capabilities: [ gpu ]
