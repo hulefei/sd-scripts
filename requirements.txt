@@ -6,8 +6,8 @@ ftfy==6.1.1
 opencv-python==4.7.0.68
 einops==0.6.0
 pytorch-lightning==1.9.0
-# bitsandbytes==0.39.1
-tensorboard==2.10.1
+bitsandbytes==0.41.1
+tensorboard==2.14.1
 safetensors==0.3.1
 # gradio==3.16.2
 altair==4.2.2
@@ -20,13 +20,20 @@ huggingface-hub==0.15.1
 # timm==0.6.12
 # fairscale==0.4.13
 # for WD14 captioning (tensorflow)
-# tensorflow==2.10.1
+tensorflow==2.14.0
+scipy==1.11.3
 # for WD14 captioning (onnx)
 # onnx==1.14.1
 # onnxruntime-gpu==1.16.0
 # onnxruntime==1.16.0
 # this is for onnx: 
-# protobuf==3.20.3
+protobuf==3.20.3
+## for cuda12
+# xformers==0.0.22.post7
+# torch==2.1.0
+## for cuda11
+xformers==0.0.21
+torch==2.0.1
 # open clip for SDXL
 open-clip-torch==2.20.0
 # for kohya_ss library
